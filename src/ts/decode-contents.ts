@@ -1,4 +1,4 @@
-import { type CookieInfos, encodeCookie, parseIp, decodeCookie } from "./engine/engine";
+import { decodeCookie, type CookieInfos } from "./engine/engine";
 
 class EncodeContents {
     private readonly container = document.getElementById("decode-contents")!;

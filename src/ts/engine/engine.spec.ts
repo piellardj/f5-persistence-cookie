@@ -38,12 +38,12 @@ describe("decodeCookie", function () {
             expect(actual).toBe(expected);
         });
     }
-    testCookie("1677787402.36895.0000", {ip: "10.1.1.100", port: 8080});
-    testCookie("1375804938.20480.0000", {ip: "10.30.1.82", port: 80});
-    testCookie("1040522762.20480.0000", {ip: "10.30.5.62", port: 80});
+    testCookie("1677787402.36895.0000", { ip: "10.1.1.100", port: 8080 });
+    testCookie("1375804938.20480.0000", { ip: "10.30.1.82", port: 80 });
+    testCookie("1040522762.20480.0000", { ip: "10.30.5.62", port: 80 });
 
-    testCookie("rd5o00000000000000000000ffffc0000201o80", {ip: "192.0.2.1", port: 80, routeDomain: 5});
-    testCookie("rd1o00000000000000000000ffff0a2c6825o80", {ip: "10.44.104.37", port: 80, routeDomain: 1});
+    testCookie("rd5o00000000000000000000ffffc0000201o80", { ip: "192.0.2.1", port: 80, routeDomain: 5 });
+    testCookie("rd1o00000000000000000000ffff0a2c6825o80", { ip: "10.44.104.37", port: 80, routeDomain: 1 });
 });
 
 describe("encodeCookie", function () {
@@ -52,11 +52,11 @@ describe("encodeCookie", function () {
             expect(Engine.encodeCookie(infos)).toBe(cookie);
         });
     }
-    testCookie({ip: "10.1.1.100", port: 8080}, "1677787402.36895.0000");
-    testCookie({ip: "10.30.1.82", port: 80}, "1375804938.20480.0000");
-    testCookie({ip: "10.30.5.62", port: 80}, "1040522762.20480.0000");
+    testCookie({ ip: "10.1.1.100", port: 8080 }, "1677787402.36895.0000");
+    testCookie({ ip: "10.30.1.82", port: 80 }, "1375804938.20480.0000");
+    testCookie({ ip: "10.30.5.62", port: 80 }, "1040522762.20480.0000");
 
-    testCookie({ip: "192.0.2.1", port: 80, routeDomain: 5}, "rd5o00000000000000000000ffffc0000201o80");
-    testCookie({ip: "10.44.104.37", port: 80, routeDomain: 1}, "rd1o00000000000000000000ffff0a2c6825o80");
+    testCookie({ ip: "192.0.2.1", port: 80, routeDomain: 5 }, "rd5o00000000000000000000ffffc0000201o80");
+    testCookie({ ip: "10.44.104.37", port: 80, routeDomain: 1 }, "rd1o00000000000000000000ffff0a2c6825o80");
 });
 

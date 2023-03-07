@@ -1,5 +1,5 @@
-import { DecodeContents } from "./encode-contents";
 import { EncodeContents } from "./decode-contents";
+import { DecodeContents } from "./encode-contents";
 
 enum EMode {
     NONE,
