@@ -35,7 +35,7 @@ const data = {
                 <div class="control-container"><input type="text" id="cookie-value" size="40" value="1677787402.36895.0000"></input></div>
             </div>
             <div class="controls-block-spacer"></div>
-            <div class="controls-block-item" id="route-domain-span-container">
+            <div class="controls-block-item" id="route-domain-span-container" style="display:none;">
                 <div class="control-label">Route domain:</div>
                 <div class="control-container"><span id="route-domain-span" disabled></span></div>
             </div>
