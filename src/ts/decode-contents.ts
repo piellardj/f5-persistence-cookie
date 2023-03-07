@@ -1,6 +1,6 @@
 import { decodeCookie, type CookieInfos } from "./engine/engine";
 
-class EncodeContents {
+class DecodeContents {
     private readonly container = document.getElementById("decode-contents")!;
     private readonly cookieValueInput = document.getElementById("cookie-value") as HTMLInputElement;
     private readonly routeDomainSpanContainer = document.getElementById("route-domain-span-container") as HTMLElement;
@@ -54,6 +54,6 @@ class EncodeContents {
 }
 
 export {
-    EncodeContents,
+    DecodeContents,
 };
 

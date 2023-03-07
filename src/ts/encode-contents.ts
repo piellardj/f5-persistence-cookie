@@ -1,6 +1,6 @@
 import { encodeCookie, parseIp, type CookieInfos } from "./engine/engine";
 
-class DecodeContents {
+class EncodeContents {
     private readonly container = document.getElementById("encode-contents")!;
     private readonly enableRouteDomainCheckbox = document.getElementById("enable-route-domain") as HTMLInputElement;
     private readonly routeDomainInput = document.getElementById("route-domain") as HTMLInputElement;
@@ -64,6 +64,6 @@ class DecodeContents {
 }
 
 export {
-    DecodeContents,
+    EncodeContents,
 };
 

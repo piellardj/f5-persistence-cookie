@@ -1,5 +1,5 @@
-import { EncodeContents } from "./decode-contents";
-import { DecodeContents } from "./encode-contents";
+import { DecodeContents } from "./decode-contents";
+import { EncodeContents } from "./encode-contents";
 
 enum EMode {
     NONE,
@@ -23,14 +23,14 @@ function initialize(): void {
         encodeContents.visibility = (newMode === EMode.ENCODE);
 
         if (mode === EMode.DECODE && newMode === EMode.ENCODE) {
-            const cookieValue = decodeContents.getEncoded();
-            if (cookieValue) {
-                encodeContents.cookieValue = cookieValue;
+            const cookieInfos = decodeContents.getCookieInfos();
+            if (cookieInfos) {
+                encodeContents.cookiesInfo = cookieInfos;
             }
         } else if (mode === EMode.ENCODE && newMode === EMode.DECODE) {
-            const cookiesInfo = encodeContents.getCookieInfos();
-            if (cookiesInfo) {
-                decodeContents.cookiesInfo = cookiesInfo;
+            const cookieValue = encodeContents.getEncoded();
+            if (cookieValue) {
+                decodeContents.cookieValue = cookieValue;
             }
         }
 
