@@ -31,17 +31,19 @@ describe("parseIp invalid", function () {
 
 
 describe("decodeCookie", function () {
-    function testCookie(cookie: string, ip: string): void {
+    function testCookie(cookie: string, cookieInfos: Engine.CookieInfos): void {
         test(cookie, () => {
-            expect(Engine.decodeCookie(cookie)).toBe(ip);
+            const actual = JSON.stringify(Engine.decodeCookie(cookie));
+            const expected = JSON.stringify(cookieInfos);
+            expect(actual).toBe(expected);
         });
     }
-    testCookie("1677787402.36895.0000", "10.1.1.100:8080");
-    testCookie("1375804938.20480.0000", "10.30.1.82:80");
-    testCookie("1040522762.20480.0000", "10.30.5.62:80");
+    testCookie("1677787402.36895.0000", {ip: "10.1.1.100", port: 8080});
+    testCookie("1375804938.20480.0000", {ip: "10.30.1.82", port: 80});
+    testCookie("1040522762.20480.0000", {ip: "10.30.5.62", port: 80});
 
-    testCookie("rd5o00000000000000000000ffffc0000201o80", "192.0.2.1:80 (route domain 5)");
-    testCookie("rd1o00000000000000000000ffff0a2c6825o80", "10.44.104.37:80 (route domain 1)");
+    testCookie("rd5o00000000000000000000ffffc0000201o80", {ip: "192.0.2.1", port: 80, routeDomain: 5});
+    testCookie("rd1o00000000000000000000ffff0a2c6825o80", {ip: "10.44.104.37", port: 80, routeDomain: 1});
 });
 
 describe("encodeCookie", function () {
