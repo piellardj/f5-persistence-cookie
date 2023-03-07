@@ -1,0 +1,62 @@
+#error-messages {
+    width: 100%;
+    font-weight: bold;
+    color: red;
+    margin: 16px auto 32px;
+}
+
+#mode-chooser {
+    margin-bottom: 16px;
+    user-select: none;
+}
+
+#mode-chooser input {
+    display: none;
+}
+
+#mode-chooser label {
+    display: inline-block;
+    margin: 0 8px;
+    opacity: 0.75;
+    cursor: pointer;
+    padding: 6px;
+}
+
+#mode-chooser input:checked+label {
+    font-weight: bold;
+    opacity: 1;
+    cursor: default;
+    text-decoration: underline;
+}
+
+.section {
+    max-width: 512px;
+    margin: auto;
+    padding: 16px;
+    border-radius: 9px;
+    background: #eee;
+    border: 1px solid #c9c9c9;
+    text-align: left;
+}
+
+@media (prefers-color-scheme: dark) {
+    .section {
+        background: #202020;
+        border-color: #535353;
+    }
+}
+
+.controls-block {
+    display: grid;
+    grid-template-columns: fit-content(300px) 1fr;
+    grid-gap: 8px;
+}
+
+.controls-block-item {
+    display: contents;
+}
+
+.controls-block-spacer {
+    height: 1em;
+    grid-column: span 2;
+}
