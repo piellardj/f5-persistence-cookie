@@ -52,8 +52,8 @@ const data = {
     <div class="section-contents" id="encode-contents" style="display:none;">
         <div class="controls-block">
             <div class="controls-block-item">
-                <div class="control-label">With route domain:</div>
-                <div class="control-container"><input type="checkbox" id="with-route-domain"></input></div>
+                <div class="control-label">Enable route domain:</div>
+                <div class="control-container"><input type="checkbox" id="enable-route-domain"></input></div>
             </div>
             <div class="controls-block-item">
                 <div class="control-label">Route domain:</div>

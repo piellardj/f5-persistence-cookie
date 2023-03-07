@@ -2,7 +2,7 @@ import { type CookieInfos, encodeCookie, parseIp } from "./engine/engine";
 
 class DecodeContents {
     private readonly container = document.getElementById("encode-contents")!;
-    private readonly withRouteDomainCheckbox = document.getElementById("with-route-domain") as HTMLInputElement;
+    private readonly enableRouteDomainCheckbox = document.getElementById("enable-route-domain") as HTMLInputElement;
     private readonly routeDomainInput = document.getElementById("route-domain") as HTMLInputElement;
     private readonly ipInput = document.getElementById("ip") as HTMLInputElement;
     private readonly portInput = document.getElementById("port") as HTMLInputElement;
@@ -12,7 +12,7 @@ class DecodeContents {
 
     public constructor() {
         const onChange = () => this.onChange();
-        this.withRouteDomainCheckbox.addEventListener("change", onChange);
+        this.enableRouteDomainCheckbox.addEventListener("change", onChange);
         this.routeDomainInput.addEventListener("change", onChange);
         this.routeDomainInput.addEventListener("keyup", onChange);
         this.ipInput.addEventListener("change", onChange);
@@ -32,10 +32,10 @@ class DecodeContents {
 
     public set cookiesInfo(cookieInfos: CookieInfos) {
         if (typeof cookieInfos.routeDomain === "number") {
-            this.withRouteDomainCheckbox.checked = true;
+            this.enableRouteDomainCheckbox.checked = true;
             this.routeDomainInput.value = cookieInfos.routeDomain.toFixed();
         } else {
-            this.withRouteDomainCheckbox.checked = false;
+            this.enableRouteDomainCheckbox.checked = false;
         }
         this.ipInput.value = cookieInfos.ip;
         this.portInput.value = cookieInfos.port.toFixed();
@@ -43,7 +43,7 @@ class DecodeContents {
     }
 
     private onChange(): void {
-        this.routeDomainInput.disabled = !this.withRouteDomainCheckbox.checked;
+        this.routeDomainInput.disabled = !this.enableRouteDomainCheckbox.checked;
 
         this.encoded = null;
 
@@ -53,7 +53,7 @@ class DecodeContents {
                 ip: rawIP,
                 port: +this.portInput.value,
             };
-            if (this.withRouteDomainCheckbox.checked) {
+            if (this.enableRouteDomainCheckbox.checked) {
                 cookieInfos.routeDomain = +this.routeDomainInput.value;
             }
             this.encoded = encodeCookie(cookieInfos);
