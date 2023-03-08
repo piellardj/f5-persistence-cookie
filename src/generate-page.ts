@@ -57,7 +57,7 @@ const data = {
             </div>
             <div class="controls-block-item">
                 <div class="control-label">Route domain:</div>
-                <div class="control-container"><input type="number" minValue="0" maxValue="100" value="1" id="route-domain" disabled></input></div>
+                <div class="control-container"><input type="number" min="0" max="100" value="1" id="route-domain" disabled></input></div>
             </div>
             <div class="controls-block-item">
                 <div class="control-label">IP:</div>
@@ -65,7 +65,7 @@ const data = {
             </div>
             <div class="controls-block-item">
                 <div class="control-label">Port:</div>
-                <div class="control-container"><input type="number" minValue="0" maxValue="65535" value="8080" id="port"></input></div>
+                <div class="control-container"><input type="number" min="0" max="65535" value="8080" id="port"></input></div>
             </div>
             <div class="controls-block-spacer"></div>
             <div class="controls-block-item">
