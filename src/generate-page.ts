@@ -69,7 +69,7 @@ const data = {
             </div>
             <div class="controls-block-spacer"></div>
             <div class="controls-block-item">
-                <div class="control-label">Encoded:</div>
+                <div class="control-label">Cookie value:</div>
                 <div class="control-container"><span id="computed-result"></span></div>
             </div>
         </div>
