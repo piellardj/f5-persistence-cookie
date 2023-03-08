@@ -46,17 +46,26 @@
     }
 }
 
-.controls-block {
-    display: grid;
-    grid-template-columns: fit-content(300px) 1fr;
-    grid-gap: 8px;
+.controls-block-item {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: baseline;
 }
 
-.controls-block-item {
-    display: contents;
+#decode-contents .control-label {
+    min-width: 7em;
+}
+#encode-contents .control-label {
+    min-width: 10em;
+}
+
+.control-container {
+    margin: 2px 0;
+}
+.control-container input {
+    font-size: 100%;
 }
 
 .controls-block-spacer {
     height: 1em;
-    grid-column: span 2;
 }

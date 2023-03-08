@@ -61,7 +61,7 @@ const data = {
             </div>
             <div class="controls-block-item">
                 <div class="control-label">IP:</div>
-                <div class="control-container"><input type="text" size="20" placeholder="XXX.XXX.XXX.XXX" value="10.1.1.100" id="ip"></input></div>
+                <div class="control-container"><input type="text" size="15" placeholder="XXX.XXX.XXX.XXX" value="10.1.1.100" id="ip"></input></div>
             </div>
             <div class="controls-block-item">
                 <div class="control-label">Port:</div>
