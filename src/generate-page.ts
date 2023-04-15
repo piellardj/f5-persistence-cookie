@@ -10,6 +10,10 @@ const data = {
         "The structure of these cookies is explained <a href='https://my.f5.com/manage/s/article/K6917'>here</a>."
     ],
     githubProjectName: "f5-persistence-cookie",
+    readme: {
+        filepath: path.join(__dirname, "..", "README.md"),
+        branchName: "main"
+    },
     additionalLinks: [],
     scriptFiles: [
         "script/main.min.js"
