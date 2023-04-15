@@ -14,7 +14,7 @@ const data = {
     scriptFiles: [
         "script/main.min.js"
     ],
-    cssFiles: [
+    styleFiles: [
         "css/demo.css"
     ],
     body:
